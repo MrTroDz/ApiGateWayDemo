@@ -25,6 +25,12 @@ namespace SampleApi1.Controllers
             return _userModels;
         }
 
+        [HttpPost("list-model")]
+        public IEnumerable<ModelUser> GetListModel(ModelUser model)
+        {
+            return null;
+        }
+
         [HttpGet("info/{accountName}")]
         public UserModel GetUserInfo(string accountName)
         {
@@ -48,5 +54,10 @@ namespace SampleApi1.Controllers
                 });
             }
         }
+    }
+
+    public class ModelUser
+    {
+        public string UserName { get; set; }
     }
 }
